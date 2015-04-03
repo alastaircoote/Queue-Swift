@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'Queue'
-  s.version = '1.0.0'
+  s.version = '1.0.1'
   s.license = 'MIT'
   s.summary = 'A simple wrapper for dispatch queues in Swift'
   s.homepage = 'https://github.com/dmgctrl/Queue-Swift'
