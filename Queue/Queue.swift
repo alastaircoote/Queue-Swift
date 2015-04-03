@@ -36,9 +36,9 @@ public struct Queue: Equatable {
         }
     }
     
-    public func after(delayInNanos: Int64, _ block: () -> ()) {
-        assert(delayInNanos >= 0, "We can't dispatch into the past.")
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, delayInNanos), queue, block)
+    public func afterDelayInNanos(nanos: Int64, _ block: () -> ()) {
+        assert(nanos >= 0, "We can't dispatch into the past.")
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, nanos), queue, block)
     }
     
     public func afterDelayInSeconds(seconds: Double, _ block: () -> ()) {
