@@ -41,6 +41,11 @@ public struct Queue: Equatable {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, delayInNanos), queue, block)
     }
     
+    public func afterDelayInSeconds(seconds: Double, _ block: () -> ()) {
+        assert(seconds >= 0, "We can't dispatch into the past.")
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(seconds * Double(NSEC_PER_SEC))), queue, block)
+    }
+    
     public func withTarget(target: Queue) -> Queue {
         dispatch_set_target_queue(self.queue, target.queue)
         return self
