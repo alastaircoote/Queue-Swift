@@ -12,15 +12,15 @@ public struct Queue: Equatable {
         self.queue = queue
     }
     
-    public func sync<T>(block: () -> T, barrier: Bool = false) -> T {
+    public func sync<T>(barrier: Bool = false, block: () -> T) -> T {
         var result: T? = nil
-        sync({
+        sync(barrier: barrier) {
             result = block()
-        }, barrier: barrier)
+        }
         return result!
     }
    
-    public func sync(block: () -> (), barrier: Bool = false) {
+    public func sync(barrier: Bool = false, block: () -> ()) {
         if barrier {
             dispatch_barrier_sync(queue, block)
         } else {
@@ -28,7 +28,7 @@ public struct Queue: Equatable {
         }
     }
     
-    public func async(block: () -> (), barrier: Bool = false) {
+    public func async(barrier: Bool = false, block: () -> ()) {
         if barrier {
             dispatch_barrier_async(queue, block)
         } else {
