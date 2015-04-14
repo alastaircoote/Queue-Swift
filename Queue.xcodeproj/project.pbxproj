@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22954F5A1ADD8F20005F38B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22954F591ADD8F20005F38B6 /* UIKit.framework */; };
 		F97081571AB0EF03002B56C1 /* Queue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F970814B1AB0EF03002B56C1 /* Queue.framework */; };
 		F970815E1AB0EF03002B56C1 /* QueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F970815D1AB0EF03002B56C1 /* QueueTests.swift */; };
 		F97081681AB0EF17002B56C1 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97081671AB0EF17002B56C1 /* Queue.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22954F591ADD8F20005F38B6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F970814B1AB0EF03002B56C1 /* Queue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Queue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F970814F1AB0EF03002B56C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F97081561AB0EF03002B56C1 /* QueueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QueueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22954F5A1ADD8F20005F38B6 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,11 +53,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22954F5B1ADD8F7F005F38B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22954F591ADD8F20005F38B6 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F97081411AB0EF03002B56C1 = {
 			isa = PBXGroup;
 			children = (
 				F970814D1AB0EF03002B56C1 /* Queue */,
 				F970815A1AB0EF03002B56C1 /* QueueTests */,
+				22954F5B1ADD8F7F005F38B6 /* Frameworks */,
 				F970814C1AB0EF03002B56C1 /* Products */,
 			);
 			sourceTree = "<group>";
