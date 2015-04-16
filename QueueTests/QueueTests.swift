@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Tonic Design. All rights reserved.
 //
 
-import UIKit
 import XCTest
 
 class QueueTests: XCTestCase {
