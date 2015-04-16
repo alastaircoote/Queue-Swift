@@ -36,7 +36,6 @@
 		22954F591ADD8F20005F38B6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BCFA42A01AE01DE4007F78F7 /* Queue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Queue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCFA42AA1AE01DE4007F78F7 /* Queue(OSX)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Queue(OSX)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCFA42B01AE01DE4007F78F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F970814B1AB0EF03002B56C1 /* Queue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Queue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F970814F1AB0EF03002B56C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F97081561AB0EF03002B56C1 /* QueueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QueueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,31 +87,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BCFA42AF1AE01DE4007F78F7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				BCFA42B01AE01DE4007F78F7 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			path = "../Queue(OSX)Tests";
-			sourceTree = "<group>";
-		};
-		BCFA42B91AE01DFE007F78F7 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				F970815B1AB0EF03002B56C1 /* Supporting Files */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		BCFA42BA1AE01E0D007F78F7 /* OSX */ = {
-			isa = PBXGroup;
-			children = (
-				BCFA42AF1AE01DE4007F78F7 /* Supporting Files */,
-			);
-			name = OSX;
-			sourceTree = "<group>";
-		};
 		F97081411AB0EF03002B56C1 = {
 			isa = PBXGroup;
 			children = (
@@ -154,8 +128,7 @@
 		F970815A1AB0EF03002B56C1 /* QueueTests */ = {
 			isa = PBXGroup;
 			children = (
-				BCFA42B91AE01DFE007F78F7 /* iOS */,
-				BCFA42BA1AE01E0D007F78F7 /* OSX */,
+				F970815B1AB0EF03002B56C1 /* Supporting Files */,
 				F970815D1AB0EF03002B56C1 /* QueueTests.swift */,
 			);
 			path = QueueTests;
