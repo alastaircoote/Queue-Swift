@@ -8,12 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		22954F5A1ADD8F20005F38B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22954F591ADD8F20005F38B6 /* UIKit.framework */; };
+		BCFA42AB1AE01DE4007F78F7 /* Queue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCFA42A01AE01DE4007F78F7 /* Queue.framework */; };
+		BCFA42BB1AE01E5C007F78F7 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97081671AB0EF17002B56C1 /* Queue.swift */; };
 		F97081571AB0EF03002B56C1 /* Queue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F970814B1AB0EF03002B56C1 /* Queue.framework */; };
 		F970815E1AB0EF03002B56C1 /* QueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F970815D1AB0EF03002B56C1 /* QueueTests.swift */; };
 		F97081681AB0EF17002B56C1 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97081671AB0EF17002B56C1 /* Queue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BCFA42AC1AE01DE4007F78F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F97081421AB0EF03002B56C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCFA429F1AE01DE4007F78F7;
+			remoteInfo = "Queue(OSX)";
+		};
 		F97081581AB0EF03002B56C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F97081421AB0EF03002B56C1 /* Project object */;
@@ -25,6 +34,9 @@
 
 /* Begin PBXFileReference section */
 		22954F591ADD8F20005F38B6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BCFA42A01AE01DE4007F78F7 /* Queue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Queue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCFA42AA1AE01DE4007F78F7 /* Queue(OSX)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Queue(OSX)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCFA42B01AE01DE4007F78F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F970814B1AB0EF03002B56C1 /* Queue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Queue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F970814F1AB0EF03002B56C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F97081561AB0EF03002B56C1 /* QueueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QueueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +46,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BCFA429C1AE01DE4007F78F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCFA42A71AE01DE4007F78F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCFA42AB1AE01DE4007F78F7 /* Queue.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F97081471AB0EF03002B56C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -61,6 +88,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BCFA42AF1AE01DE4007F78F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BCFA42B01AE01DE4007F78F7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			path = "../Queue(OSX)Tests";
+			sourceTree = "<group>";
+		};
+		BCFA42B91AE01DFE007F78F7 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F970815B1AB0EF03002B56C1 /* Supporting Files */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		BCFA42BA1AE01E0D007F78F7 /* OSX */ = {
+			isa = PBXGroup;
+			children = (
+				BCFA42AF1AE01DE4007F78F7 /* Supporting Files */,
+			);
+			name = OSX;
+			sourceTree = "<group>";
+		};
 		F97081411AB0EF03002B56C1 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +128,8 @@
 			children = (
 				F970814B1AB0EF03002B56C1 /* Queue.framework */,
 				F97081561AB0EF03002B56C1 /* QueueTests.xctest */,
+				BCFA42A01AE01DE4007F78F7 /* Queue.framework */,
+				BCFA42AA1AE01DE4007F78F7 /* Queue(OSX)Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,8 +154,9 @@
 		F970815A1AB0EF03002B56C1 /* QueueTests */ = {
 			isa = PBXGroup;
 			children = (
+				BCFA42B91AE01DFE007F78F7 /* iOS */,
+				BCFA42BA1AE01E0D007F78F7 /* OSX */,
 				F970815D1AB0EF03002B56C1 /* QueueTests.swift */,
-				F970815B1AB0EF03002B56C1 /* Supporting Files */,
 			);
 			path = QueueTests;
 			sourceTree = "<group>";
@@ -117,6 +172,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		BCFA429D1AE01DE4007F78F7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F97081481AB0EF03002B56C1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,6 +189,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		BCFA429F1AE01DE4007F78F7 /* Queue(OSX) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCFA42B71AE01DE4007F78F7 /* Build configuration list for PBXNativeTarget "Queue(OSX)" */;
+			buildPhases = (
+				BCFA429B1AE01DE4007F78F7 /* Sources */,
+				BCFA429C1AE01DE4007F78F7 /* Frameworks */,
+				BCFA429D1AE01DE4007F78F7 /* Headers */,
+				BCFA429E1AE01DE4007F78F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Queue(OSX)";
+			productName = "Queue(OSX)";
+			productReference = BCFA42A01AE01DE4007F78F7 /* Queue.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BCFA42A91AE01DE4007F78F7 /* Queue(OSX)Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCFA42B81AE01DE4007F78F7 /* Build configuration list for PBXNativeTarget "Queue(OSX)Tests" */;
+			buildPhases = (
+				BCFA42A61AE01DE4007F78F7 /* Sources */,
+				BCFA42A71AE01DE4007F78F7 /* Frameworks */,
+				BCFA42A81AE01DE4007F78F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCFA42AD1AE01DE4007F78F7 /* PBXTargetDependency */,
+			);
+			name = "Queue(OSX)Tests";
+			productName = "Queue(OSX)Tests";
+			productReference = BCFA42AA1AE01DE4007F78F7 /* Queue(OSX)Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F970814A1AB0EF03002B56C1 /* Queue */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F97081611AB0EF03002B56C1 /* Build configuration list for PBXNativeTarget "Queue" */;
@@ -172,6 +270,12 @@
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "Tonic Design";
 				TargetAttributes = {
+					BCFA429F1AE01DE4007F78F7 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					BCFA42A91AE01DE4007F78F7 = {
+						CreatedOnToolsVersion = 6.2;
+					};
 					F970814A1AB0EF03002B56C1 = {
 						CreatedOnToolsVersion = 6.2;
 					};
@@ -194,11 +298,27 @@
 			targets = (
 				F970814A1AB0EF03002B56C1 /* Queue */,
 				F97081551AB0EF03002B56C1 /* QueueTests */,
+				BCFA429F1AE01DE4007F78F7 /* Queue(OSX) */,
+				BCFA42A91AE01DE4007F78F7 /* Queue(OSX)Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BCFA429E1AE01DE4007F78F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCFA42A81AE01DE4007F78F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F97081491AB0EF03002B56C1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,6 +336,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BCFA429B1AE01DE4007F78F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCFA42BB1AE01E5C007F78F7 /* Queue.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCFA42A61AE01DE4007F78F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F97081461AB0EF03002B56C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,6 +370,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		BCFA42AD1AE01DE4007F78F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCFA429F1AE01DE4007F78F7 /* Queue(OSX) */;
+			targetProxy = BCFA42AC1AE01DE4007F78F7 /* PBXContainerItemProxy */;
+		};
 		F97081591AB0EF03002B56C1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F970814A1AB0EF03002B56C1 /* Queue */;
@@ -243,6 +383,86 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		BCFA42B31AE01DE4007F78F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Queue(OSX)/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = Queue;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BCFA42B41AE01DE4007F78F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Queue(OSX)/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = Queue;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		BCFA42B51AE01DE4007F78F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Queue(OSX)Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BCFA42B61AE01DE4007F78F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Queue(OSX)Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		F970815F1AB0EF03002B56C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -393,6 +613,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BCFA42B71AE01DE4007F78F7 /* Build configuration list for PBXNativeTarget "Queue(OSX)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCFA42B31AE01DE4007F78F7 /* Debug */,
+				BCFA42B41AE01DE4007F78F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BCFA42B81AE01DE4007F78F7 /* Build configuration list for PBXNativeTarget "Queue(OSX)Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCFA42B51AE01DE4007F78F7 /* Debug */,
+				BCFA42B61AE01DE4007F78F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F97081451AB0EF03002B56C1 /* Build configuration list for PBXProject "Queue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
