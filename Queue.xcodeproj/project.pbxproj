@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		22954F5A1ADD8F20005F38B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22954F591ADD8F20005F38B6 /* UIKit.framework */; };
+		BC8772E61AE04E2600DFD1BC /* QueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F970815D1AB0EF03002B56C1 /* QueueTests.swift */; };
 		BCFA42AB1AE01DE4007F78F7 /* Queue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCFA42A01AE01DE4007F78F7 /* Queue.framework */; };
 		BCFA42BB1AE01E5C007F78F7 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97081671AB0EF17002B56C1 /* Queue.swift */; };
 		F97081571AB0EF03002B56C1 /* Queue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F970814B1AB0EF03002B56C1 /* Queue.framework */; };
@@ -35,7 +36,7 @@
 /* Begin PBXFileReference section */
 		22954F591ADD8F20005F38B6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BCFA42A01AE01DE4007F78F7 /* Queue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Queue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCFA42AA1AE01DE4007F78F7 /* Queue(OSX)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Queue(OSX)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCFA42AA1AE01DE4007F78F7 /* QueueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QueueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F970814B1AB0EF03002B56C1 /* Queue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Queue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F970814F1AB0EF03002B56C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F97081561AB0EF03002B56C1 /* QueueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QueueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,7 +104,7 @@
 				F970814B1AB0EF03002B56C1 /* Queue.framework */,
 				F97081561AB0EF03002B56C1 /* QueueTests.xctest */,
 				BCFA42A01AE01DE4007F78F7 /* Queue.framework */,
-				BCFA42AA1AE01DE4007F78F7 /* Queue(OSX)Tests.xctest */,
+				BCFA42AA1AE01DE4007F78F7 /* QueueTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -195,7 +196,7 @@
 			);
 			name = "Queue(OSX)Tests";
 			productName = "Queue(OSX)Tests";
-			productReference = BCFA42AA1AE01DE4007F78F7 /* Queue(OSX)Tests.xctest */;
+			productReference = BCFA42AA1AE01DE4007F78F7 /* QueueTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		F970814A1AB0EF03002B56C1 /* Queue */ = {
@@ -321,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC8772E61AE04E2600DFD1BC /* QueueTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +416,7 @@
 				INFOPLIST_FILE = QueueTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = QueueTests;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -431,7 +433,7 @@
 				INFOPLIST_FILE = QueueTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = QueueTests;
 				SDKROOT = macosx;
 			};
 			name = Release;
