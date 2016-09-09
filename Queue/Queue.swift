@@ -2,17 +2,17 @@ import Dispatch
 
 
 public struct Queue: Equatable {
-    var queue: dispatch_queue_t
+    var queue: DispatchQueue
     
     public init() {
-        self.queue = dispatch_queue_create(nil, nil)
+        self.queue = DispatchQueue(label: "", attributes: [])
     }
     
-    public init(_ queue: dispatch_queue_t) {
+    public init(_ queue: DispatchQueue) {
         self.queue = queue
     }
     
-    public func sync<T>(block: () -> T) -> T {
+    public func sync<T>(_ block: () -> T) -> T {
         var result: T? = nil
         sync {
             result = block()
@@ -20,57 +20,57 @@ public struct Queue: Equatable {
         return result!
     }
    
-    public func sync(block: () -> ()) {
-        dispatch_sync(queue, block)
+    public func sync(_ block: () -> ()) {
+        queue.sync(execute: block)
     }
 
-    public func sync(barrier: Bool, block: () -> ()) {
+    public func sync(_ barrier: Bool, block: () -> ()) {
         if barrier {
-            dispatch_barrier_sync(queue, block)
+            queue.sync(flags: .barrier, execute: block)
         } else {
-            dispatch_sync(queue, block)
+            queue.sync(execute: block)
         }
     }
 
-    public func async(block: () -> ()) {
-        dispatch_async(queue, block)
+    public func async(_ block: @escaping () -> ()) {
+        queue.async(execute: block)
     }
 
-    public func async(barrier: Bool, _ block: () -> ()) {
+    public func async(_ barrier: Bool, _ block: @escaping () -> ()) {
         if barrier {
-            dispatch_barrier_async(queue, block)
+            queue.async(flags: .barrier, execute: block)
         } else {
-            dispatch_async(queue, block)
+            queue.async(execute: block)
         }
     }
     
-    public func afterDelayInNanos(nanos: Int64, _ block: () -> ()) {
+    public func afterDelayInNanos(_ nanos: Int64, _ block: @escaping () -> ()) {
         assert(nanos >= 0, "We can't dispatch into the past.")
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, nanos), queue, block)
+        queue.asyncAfter(deadline: DispatchTime.now() + Double(nanos) / Double(NSEC_PER_SEC), execute: block)
     }
     
-    public func afterDelayInSeconds(seconds: Double, _ block: () -> ()) {
+    public func afterDelayInSeconds(_ seconds: Double, _ block: @escaping () -> ()) {
         assert(seconds >= 0, "We can't dispatch into the past.")
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(seconds * Double(NSEC_PER_SEC))), queue, block)
+        queue.asyncAfter(deadline: DispatchTime.now() + Double(Int64(seconds * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: block)
     }
     
-    public func withTarget(target: Queue) -> Queue {
-        dispatch_set_target_queue(self.queue, target.queue)
+    public func withTarget(_ target: Queue) -> Queue {
+        self.queue.setTarget(queue: target.queue)
         return self
     }
     
     public func suspend() -> Queue {
-        dispatch_suspend(queue)
+        queue.suspend()
         return self
     }
     
     public func resume() -> Queue {
-        dispatch_resume(queue)
+        queue.resume()
         return self
     }
 
-    public static let Main = Queue(dispatch_get_main_queue())
-    public static let Background = Queue(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0))
+    public static let Main = Queue(DispatchQueue.main)
+    public static let Background = Queue(DispatchQueue.global())
 }
 
 
