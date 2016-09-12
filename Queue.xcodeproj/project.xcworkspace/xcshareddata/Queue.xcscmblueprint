@@ -9,7 +9,7 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "37F0A835-5858-4EBB-AA3C-34827EC7E5BD",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "EDDFA7834562B24E00AA4AD6E55AC8B3126E5C75" : "Queue-Swift",
+    "EDDFA7834562B24E00AA4AD6E55AC8B3126E5C75" : "Queue-Swift\/",
     "B9245EB531821082D0610E851A6C2193BC652300" : "Quick"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Queue",
